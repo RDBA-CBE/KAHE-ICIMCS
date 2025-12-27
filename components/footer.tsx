@@ -37,6 +37,17 @@ export function Footer() {
               <Globe className="h-4 w-4" />
               <span className="text-sm md:text-base">www.kahedu.edu.in</span>
             </Link>
+            <span className="mx-2 text-gray-500">|</span>
+            <span className="text-sm md:text-base">Concept by{' '}
+            <Link
+              href="https://irepute.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm md:text-base font-bold hover:text-cyan-300 transition-colors"
+            >
+              repute
+            </Link>
+            </span>
           </div>
         </div>
       </div>

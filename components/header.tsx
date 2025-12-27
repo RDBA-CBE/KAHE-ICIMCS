@@ -53,6 +53,13 @@ export function Header() {
             >
               Advisory
             </NavLink>
+            <NavLink
+              href="/#contact-section"
+              className="text-m font-semibold transition-colors duration-300 text-white/90 hover:text-cyan-300"
+              activeClassName="text-m font-semibold transition-colors duration-300 text-cyan-300"
+            >
+              Contact Us
+            </NavLink>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -95,10 +102,18 @@ export function Header() {
             <NavLink
               href="/advisory"
               onClick={closeMenu}
+              className="block text-base font-semibold transition-colors duration-300 py-2 border-b border-white/10 text-white/90 hover:text-cyan-300"
+              activeClassName="block text-base font-semibold transition-colors duration-300 py-2 border-b border-white/10 text-cyan-300"
+            >
+              Advisory
+            </NavLink>
+            <NavLink
+              href="/#contact-section"
+              onClick={closeMenu}
               className="block text-base font-semibold transition-colors duration-300 py-2 text-white/90 hover:text-cyan-300"
               activeClassName="block text-base font-semibold transition-colors duration-300 py-2 text-cyan-300"
             >
-              Advisory
+              Contact Us
             </NavLink>
           </nav>
         </div>

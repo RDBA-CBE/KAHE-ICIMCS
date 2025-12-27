@@ -4,7 +4,7 @@ import { QrCode } from "lucide-react"
 
 export function PaymentDetailsSection() {
   return (
-    <section className="py-[60px] bg-gradient-to-b from-gray-50 to-white">
+    <section id="contact-section" className="py-[60px] bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8">
           <div className="p-8 md:p-12 bg-white shadow-2xl border-0 rounded-3xl">
@@ -18,7 +18,7 @@ export function PaymentDetailsSection() {
             <div className="p-6 bg-gray-50 rounded-xl border-2 border-gray-200">
               <div className="text-center">
                 <div className="inline-block p-4 bg-white rounded-lg mb-4">
-                  <QrCode className="h-24 w-24 text-gray-400" />
+                  <img src="/qr/qr.png" alt="Payment QR Code" className="h-24 w-24" />
                 </div>
                 <p className="text-xl font-bold text-gray-900 mb-2">SCAN ME</p>
                 <p className="text-sm text-gray-600">Scan QR code to submit payment</p>
