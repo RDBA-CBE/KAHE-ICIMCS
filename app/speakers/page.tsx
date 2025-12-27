@@ -162,10 +162,10 @@ export default function SpeakersPage() {
                             alt={speaker.name}
                             className="w-full h-full object-cover object-top"
                             style={{ objectPosition: "center top" }}
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement
-                              target.src = `/speakers/${index + 1}.jpg`
-                            }}
+                            // onError={(e) => {
+                            //   const target = e.target as HTMLImageElement
+                            //   target.src = `/speakers/${index + 1}.jpg`
+                            // }}
                           />
                         </div>
                       </div>
