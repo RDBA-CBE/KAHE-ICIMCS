@@ -47,6 +47,13 @@ export function Header() {
               About
             </NavLink>
             <NavLink
+              href="/speakers"
+              className="text-m font-semibold transition-colors duration-300 text-white/90 hover:text-cyan-300"
+              activeClassName="text-m font-semibold transition-colors duration-300 text-cyan-300"
+            >
+              Speakers
+            </NavLink>
+            <NavLink
               href="/advisory"
               className="text-m font-semibold transition-colors duration-300 text-white/90 hover:text-cyan-300"
               activeClassName="text-m font-semibold transition-colors duration-300 text-cyan-300"

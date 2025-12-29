@@ -16,8 +16,8 @@ export function SponsorsSection() {
   const acsJournals = [
     { name: "ACS Applied Nano Materials", image: "/sponsors/1.png" },
     { name: "ACS Applied Energy Materials", image: "/sponsors/2.png" },
-    { name: "ACS Materials", image: "/sponsors/3.png" },
-    { name: "ACS Sustainable Chemistry & Engineering", image: "/sponsors/4.jpg" },
+    { name: "ACS Materials", image: "/sponsors/3.jpg" },
+    { name: "ACS Sustainable Chemistry & Engineering", image: "/sponsors/4.png" },
     { name: "ACS Omega", image: "/sponsors/5.png" },
     { name: "Sponsor", image: "/sponsors/6.png" },
   ]

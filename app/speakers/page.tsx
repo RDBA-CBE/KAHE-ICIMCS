@@ -129,24 +129,28 @@ export default function SpeakersPage() {
   ]
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
       <Header />
-
-      <main className="pt-16">
-        <section className="gradient-hero py-20 text-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance">Meet Our Speakers</h1>
-              <p className="text-xl opacity-90 leading-relaxed">
-                Learn from world-renowned experts and thought leaders in Material Chemistry and Sustainable Technologies
-              </p>
-            </div>
+      
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#0a1f3d] via-[#1e3a8a] via-[#7c3aed] to-[#06b6d4] overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl" />
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 bg-gradient-to-r from-white via-cyan-100 to-purple-100 bg-clip-text text-transparent">
+              Advisory Committee
+            </h1>
           </div>
-        </section>
+        </div>
+      </section>
 
         <section className="py-20 bg-gradient-to-b from-white to-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {speakers.map((speaker, index) => (
                 <Card
                   key={index}
@@ -155,7 +159,7 @@ export default function SpeakersPage() {
                 >
                   <div className="p-8">
                     <div className="flex justify-center mb-6">
-                      <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary via-purple-500 to-cyan-500 p-1">
+                      <div className="w-68 h-68 rounded-full bg-gradient-to-br from-primary via-purple-500 to-cyan-500 p-1">
                         <div className="w-full h-full rounded-full overflow-hidden border-4 border-background">
                           <img
                             src={getSpeakerImage(index)}
@@ -174,34 +178,16 @@ export default function SpeakersPage() {
                     <h3 className="text-2xl font-bold mb-2 text-center">{speaker.name}</h3>
                     <p className="text-muted-foreground text-sm text-center mb-4">{speaker.company}</p>
 
-                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed text-center">{speaker.bio}</p>
+                    
 
-                    <div className="flex flex-wrap gap-2 justify-center mb-6">
-                      {speaker.expertise.map((skill, i) => (
-                        <span key={i} className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="flex justify-center gap-2">
-                      <Button size="icon" variant="ghost">
-                        <Linkedin className="h-5 w-5" />
-                      </Button>
-                      <Button size="icon" variant="ghost">
-                        <Twitter className="h-5 w-5" />
-                      </Button>
-                      <Button size="icon" variant="ghost">
-                        <Globe className="h-5 w-5" />
-                      </Button>
-                    </div>
+                    
                   </div>
                 </Card>
               ))}
             </div>
           </div>
         </section>
-      </main>
+      
     </div>
   )
 }
