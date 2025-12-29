@@ -142,7 +142,7 @@ export default function SpeakersPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 bg-gradient-to-r from-white via-cyan-100 to-purple-100 bg-clip-text text-transparent">
-              Advisory Committee
+              Meet Our Speakers
             </h1>
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function SpeakersPage() {
 
         <section className="py-20 bg-gradient-to-b from-white to-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {speakers.map((speaker, index) => (
                 <Card
                   key={index}
