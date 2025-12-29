@@ -150,7 +150,7 @@ export default function SpeakersPage() {
 
         <section className="py-20 bg-gradient-to-b from-white to-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {speakers.map((speaker, index) => (
                 <Card
                   key={index}
@@ -159,7 +159,7 @@ export default function SpeakersPage() {
                 >
                   <div className="p-8">
                     <div className="flex justify-center mb-6">
-                      <div className="w-68 h-68 rounded-full bg-gradient-to-br from-primary via-purple-500 to-cyan-500 p-1">
+                      <div className="w-54 h-54 rounded-full bg-gradient-to-br from-primary via-purple-500 to-cyan-500 p-1">
                         <div className="w-full h-full rounded-full overflow-hidden border-4 border-background">
                           <img
                             src={getSpeakerImage(index)}
