@@ -96,7 +96,6 @@ export default function AboutPage() {
                 <h3 className='text-lg font-bold text-cyan-700 mb-2'>
                   Poster Presentation Template
                 </h3>
-
                 <span className='mt-3 inline-block text-cyan-600 font-semibold group-hover:underline'>
                   Download PPT →
                 </span>
