@@ -1,5 +1,6 @@
 import { Header } from '@/components/header';
 import { Card } from '@/components/ui/card';
+import { Footer } from "@/components/footer"
 import { Button } from '@/components/ui/button';
 import { Linkedin, Twitter, Globe } from 'lucide-react';
 
@@ -195,6 +196,7 @@ export default function SpeakersPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

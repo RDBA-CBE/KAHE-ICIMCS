@@ -67,6 +67,13 @@ export function Header() {
             >
               Contact Us
             </NavLink>
+            <NavLink
+              href="/#contact-section"
+              className="text-m font-semibold transition-colors duration-300 text-white/90 hover:text-cyan-300"
+              activeClassName="text-m font-semibold transition-colors duration-300 text-cyan-300"
+            >
+              Registration
+            </NavLink>
           </nav>
 
           {/* Mobile Menu Button */}
