@@ -48,8 +48,8 @@ export default function AboutPage() {
             </div>
 
             <p className='text-gray-700 text-lg mb-8 leading-relaxed'>
-              The registration form along with the payment proof should be
-              submitted using the links below.
+              Registration form along with the payment proof should be
+              submitted here.
             </p>
 
             {/* Cards */}
