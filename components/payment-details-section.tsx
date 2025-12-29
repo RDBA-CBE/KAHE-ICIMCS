@@ -56,7 +56,7 @@ export function PaymentDetailsSection() {
                   rel='noopener noreferrer'
                   className='flex items-center justify-center rounded-xl border-2 border-cyan-600 px-4 py-4 font-semibold text-cyan-600 hover:bg-cyan-600 hover:text-white transition-all'
                 >
-                  View Conference PPT
+                  Poster presentation template
                 </a>
 
                 {/* DOCX - Half Width */}
@@ -66,7 +66,7 @@ export function PaymentDetailsSection() {
                   rel='noopener noreferrer'
                   className='flex items-center justify-center rounded-xl border-2 border-emerald-600 px-4 py-4 font-semibold text-emerald-600 hover:bg-emerald-600 hover:text-white transition-all'
                 >
-                  Download Conference Document
+                  Oral presentation template
                 </a>
               </div>
             </div>
