@@ -157,10 +157,10 @@ export default function SpeakersPage() {
                   className="overflow-hidden hover:shadow-2xl transition-all duration-300 animate-in fade-in zoom-in-95 duration-700 group"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="p-8">
+                  <div className="p-4">
                     <div className="flex justify-center mb-6">
-                      <div className="w-54 h-54 rounded-full bg-gradient-to-br from-primary via-purple-500 to-cyan-500 p-1">
-                        <div className="w-full h-full rounded-full overflow-hidden border-4 border-background">
+                      <div className="w-68 h-68 bg-gradient-to-br from-primary via-purple-500 to-cyan-500 p-1">
+                        <div className="w-full h-full overflow-hidden border-4 border-background">
                           <img
                             src={getSpeakerImage(index)}
                             alt={speaker.name}
