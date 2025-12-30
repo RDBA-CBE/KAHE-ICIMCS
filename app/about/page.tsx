@@ -1,7 +1,39 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import { Header } from "@/components/header"
 import { FlaskConical, Users, Award, BookOpen, Microscope, ChevronRight, Beaker, Activity, Radio, BarChart3 } from "lucide-react"
 import { ActivitiesSection } from "@/components/activities-section"
 import { Footer } from "@/components/footer"
+
+
+interface CounterProps {
+  value: number;
+  duration?: number;
+}
+
+const Counter = ({ value, duration = 2000 }: CounterProps) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const increment = value / (duration / 16);
+
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= value) {
+        setCount(value);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+
+    return () => clearInterval(timer);
+  }, [value, duration]);
+
+  return <>{count.toLocaleString()}</>;
+};
 
 export default function AboutPage() {
   return (
@@ -51,31 +83,48 @@ export default function AboutPage() {
 
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-gray-200">
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text mb-2">
-                  7,500+
-                </div>
-                <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider">Publications</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-2">
-                  70K+
-                </div>
-                <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider">Citations</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text mb-2">
-                  96
-                </div>
-                <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider">H-Index</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text mb-2">
-                  147
-                </div>
-                <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider">Patents</div>
-              </div>
-            </div>
+
+      {/* Publications */}
+      <div className="text-center">
+        <div className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text mb-2">
+          <Counter value={7937} />
+        </div>
+        <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider">
+          Publications
+        </div>
+      </div>
+
+      {/* Citations */}
+      <div className="text-center">
+        <div className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-2">
+          <Counter value={77296} />
+        </div>
+        <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider">
+          Citations
+        </div>
+      </div>
+
+      {/* H-Index */}
+      <div className="text-center">
+        <div className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text mb-2">
+          <Counter value={99} />
+        </div>
+        <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider">
+          H-Index
+        </div>
+      </div>
+
+      {/* Patents */}
+      <div className="text-center">
+        <div className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text mb-2">
+          <Counter value={158} />
+        </div>
+        <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider">
+          Patents
+        </div>
+      </div>
+
+    </div>
           </div>
 
           {/* About the Department */}

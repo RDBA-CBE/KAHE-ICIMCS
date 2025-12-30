@@ -93,6 +93,13 @@ export default function SpeakersPage() {
       expertise: ['Energy Materials', 'Electrochemistry', 'Research'],
     },
     {
+      name: 'Prof. S.Sampath',
+      role: 'Scientist',
+      company: 'IISc, Bangalore.',
+      bio: 'Distinguished scientist in material chemistry with expertise in energy materials and electrochemical systems.',
+      expertise: ['Energy Materials', 'Electrochemistry', 'Research'],
+    },
+    {
       name: 'Prof. S.Shanmugaraju',
       role: 'Professor',
       company: 'IIT, Palakkad',
