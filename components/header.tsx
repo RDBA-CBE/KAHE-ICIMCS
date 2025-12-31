@@ -8,6 +8,7 @@ import { NavLink } from './nav-link';
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDownloadOpen, setIsDownloadOpen] = useState(false);
+  const [isMobileDownloadOpen, setIsMobileDownloadOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -175,6 +176,47 @@ export function Header() {
             >
               Contact Us
             </NavLink>
+
+            <div className='relative'>
+              <button
+                onClick={() => setIsMobileDownloadOpen(!isMobileDownloadOpen)}
+                className='block text-base font-semibold transition-colors duration-300 py-2 border-b border-white/10 text-white/90 hover:text-cyan-300 w-full text-left'
+              >
+                Download
+              </button>
+
+              <div className={`mt-2 space-y-2 ${isMobileDownloadOpen ? 'block' : 'hidden'}`}>
+                <Link
+                  href='/document/ICIMCS-26-Brochure.pdf'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  onClick={closeMenu}
+                  className='block px-5 py-3 text-sm text-white/90 hover:text-cyan-300'
+                >
+                  Conference Brochure
+                </Link>
+
+                <Link
+                  href='/document/ICIMCS_2026_Poster_90x118cm_Portrait.pptx'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  onClick={closeMenu}
+                  className='block px-5 py-3 text-sm text-white/90 hover:text-cyan-300'
+                >
+                  Poster presentation template
+                </Link>
+
+                <Link
+                  href='/document/Abstract-template-ICIMCS-2026.docx'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  onClick={closeMenu}
+                  className='block px-5 py-3 text-sm text-white/90 hover:text-cyan-300'
+                >
+                  Oral presentation template
+                </Link>
+              </div>
+            </div>
           </nav>
         </div>
       </div>

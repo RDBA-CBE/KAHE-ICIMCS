@@ -79,29 +79,31 @@ export function HeroSection() {
             </div>
 
             {/* Main Title with enhanced typography and left decorative panel */}
-            <div className='flex items-center justify-center gap-6 md:gap-10 md:items-start'>
-              {/* Left vertical SDG-like panel with logo + three goal boxes (hidden on small screens) */}
-              <div className='hidden md:flex flex-col items-center flex-shrink-0 mt-20'>
+            <div className='flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 md:items-start'>
+              {/* Left vertical SDG-like panel with logo + three goal boxes (visible on all screens) */}
+              <div className='flex flex-col items-center gap-4 flex-shrink-0 mt-20 md:mt-20 md:gap-3'>
+                <h4 className='text-white font-bold text-lg md:text-xl mb-4 text-center'>
+                  Sustainable Development Goals
+                </h4>
                 <div className='space-y-3'>
                   {/* Innovation / Health */}
-
-                  <div className='w-60 bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-4 md:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300'>
+                  <div className='w-48 md:w-60 bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-3 md:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300'>
                     <div className='flex items-center gap-4'>
                       {/* Icon - LEFT */}
                       <div className='flex-shrink-0'>
                         <img
                           src='/banner/good-heart.png'
                           alt='Good Health'
-                          className='h-14 w-14 object-contain invert brightness-0'
+                          className='h-12 w-12 md:h-14 md:w-14 object-contain invert brightness-0'
                         />
                       </div>
 
                       {/* Content - RIGHT */}
                       <div className='text-left'>
-                        <div className='text-md font-black text-yellow-400 tracking-wide'>
+                        <div className='text-sm md:text-md font-black text-yellow-400 tracking-wide'>
                           03
                         </div>
-                        <div className='text-md font-bold text-white leading-tight'>
+                        <div className='text-sm md:text-md font-bold text-white leading-tight'>
                           Good Health
                           <br />
                           And well Being
@@ -110,23 +112,23 @@ export function HeroSection() {
                     </div>
                   </div>
                   {/* Water / Materials */}
-                  <div className='w-60 bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-4 md:p-6  border border-white/20 hover:bg-white/15 transition-all duration-300'>
+                  <div className='w-48 md:w-60 bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-3 md:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300'>
                     <div className='flex items-center gap-4'>
                       {/* Icon - LEFT */}
                       <div className='flex-shrink-0'>
                         <img
                           src='/banner/clean-water.png'
                           alt='Clean Water'
-                          className='h-14 w-14 object-contain invert brightness-0'
+                          className='h-12 w-12 md:h-14 md:w-14 object-contain invert brightness-0'
                         />
                       </div>
 
                       {/* Content - RIGHT */}
                       <div className='text-left'>
-                        <div className='text-md font-black text-yellow-400 tracking-wide'>
+                        <div className='text-sm md:text-md font-black text-yellow-400 tracking-wide'>
                           06
                         </div>
-                        <div className='text-md font-bold text-white leading-tight'>
+                        <div className='text-sm md:text-md font-bold text-white leading-tight'>
                           Clean Water
                           <br />
                           And Sanitation
@@ -135,23 +137,23 @@ export function HeroSection() {
                     </div>
                   </div>
                   {/* Energy / Sustainability */}
-                  <div className='w-60 bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-4 md:p-6  border border-white/20 hover:bg-white/15 transition-all duration-300'>
+                  <div className='w-48 md:w-60 bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-3 md:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300'>
                     <div className='flex items-center gap-4'>
                       {/* Icon - LEFT */}
                       <div className='flex-shrink-0'>
                         <img
                           src='/banner/clean-energy.png'
                           alt='Clean Energy'
-                          className='h-14 w-14 object-contain invert brightness-0'
+                          className='h-12 w-12 md:h-14 md:w-14 object-contain invert brightness-0'
                         />
                       </div>
 
                       {/* Content - RIGHT */}
                       <div className='text-left'>
-                        <div className='text-md font-black text-yellow-400 tracking-wide'>
+                        <div className='text-sm md:text-md font-black text-yellow-400 tracking-wide'>
                           07
                         </div>
-                        <div className='text-md font-bold text-white leading-tight'>
+                        <div className='text-sm md:text-md font-bold text-white leading-tight'>
                           Affordable
                           <br />
                           And Clean Energy
