@@ -36,7 +36,7 @@ export function CommitteeMembersSection() {
           </div>
 
           {/* Patrons and Convenors - Side by Side */}
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-3 gap-12">
             {/* Patrons */}
             <div className="relative">
               <div className="sticky top-8">
@@ -72,7 +72,7 @@ export function CommitteeMembersSection() {
             </div>
 
             {/* Convenors */}
-            <div className="relative">
+<div className="relative">
               <div>
                 <div className="flex items-center gap-3 mb-6 pb-4 border-b-2 border-gray-300">
                   <div className="p-3 bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 rounded-xl">
@@ -103,6 +103,41 @@ export function CommitteeMembersSection() {
                 </div>
               </div>
             </div>
+
+ {/* Convenors */}
+            <div className="relative">
+              <div>
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b-2 border-gray-300">
+                  <div className="p-3 bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 rounded-xl">
+                    <UserCheck className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-black bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">Co-Convenors</h3>
+                </div>
+                <div className="space-y-4">
+                  {[
+                    { name: "Dr. A. Manikandan", role: "Professor, Department of Chemistry" },
+                    { name: "Dr. D. Manoj", role: "Associate Professor, Department of Chemistry" },
+                  ].map((member, index) => (
+                    <div
+                      key={index}
+                      className="group relative p-5 bg-white rounded-2xl border-2 border-gray-200 hover:border-gray-400 transition-all duration-300 hover:shadow-lg"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="flex-shrink-0 w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-gray-200 transition-colors">
+                          <span className="text-lg font-bold text-gray-600">{index + 1}</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-bold text-gray-900 mb-1 truncate">{member.name}</p>
+                          <p className="text-sm text-gray-600 line-clamp-2">{member.role}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            
           </div>
 
           {/* Organizing Committee - Grid with Numbers */}
@@ -112,16 +147,14 @@ export function CommitteeMembersSection() {
                 <div className="p-2 bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 rounded-lg">
                   <Users className="h-5 w-5 text-white" />
                 </div>
-                <h3 className="text-2xl font-black bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">Organizing Committee</h3>
+                <h3 className="text-2xl font-black bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">Organizing Secretaries</h3>
               </div>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {[
-                { name: "Dr. A. Manikandan", role: "Professor" },
-                { name: "Dr. D. Manoj", role: "Associate Professor" },
+                { name: "Dr. R. Suresh", role: "Associate Professor" },
                 { name: "Dr. R. Kumar", role: "Assistant Professor" },
                 { name: "Dr. G. Kalaiarasi", role: "Assistant Professor" },
-                { name: "Dr. R. Suresh", role: "Associate Professor" },
                 { name: "Dr. K. Sundaram", role: "Assistant Professor" },
                 { name: "Dr. N. Kannapiran", role: "Assistant Professor" },
                 { name: "Dr. K. Radhakrishnan", role: "Assistant Professor" },

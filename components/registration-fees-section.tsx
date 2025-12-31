@@ -39,9 +39,11 @@ export function RegistrationFeesSection() {
                 </tr>
                 <tr className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 text-white">
                   <th className="p-2 border border-white/20"></th>
-                  <th className="p-2 text-center font-semibold border border-white/20">Early-bird</th>
+                  <th className="p-2 text-center font-semibold border border-white/20">Early-bird <br/>
+                  (Before Jan-15, 2026)</th>
                   <th className="p-2 text-center font-semibold border border-white/20">Late</th>
-                  <th className="p-2 text-center font-semibold border border-white/20">Early-bird</th>
+                  <th className="p-2 text-center font-semibold border border-white/20">Early-bird <br/>
+                  (Before Jan-15,2026)</th>
                   <th className="p-2 text-center font-semibold border border-white/20">Late</th>
                 </tr>
               </thead>
