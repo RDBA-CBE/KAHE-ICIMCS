@@ -171,7 +171,7 @@ export function Header() {
             <NavLink
               href='/#contact-section'
               onClick={closeMenu}
-              className='block text-base font-semibold transition-colors duration-300 py-2 text-white/90 hover:text-cyan-300'
+              className='block text-base font-semibold transition-colors duration-300 py-2 border-b border-white/10 text-white/90 hover:text-cyan-300'
               activeClassName='block text-base font-semibold transition-colors duration-300 py-2 text-cyan-300'
             >
               Contact Us
