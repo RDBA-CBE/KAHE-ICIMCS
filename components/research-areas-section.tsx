@@ -17,6 +17,7 @@ export function ResearchAreasSection() {
     "Green and Environmental Chemistry",
     "Polymer and Industrial Chemistry",
     "Quantum Chemistry and Technologies",
+    "Chemical and Bio-sensors",
     "Bioinorganic Chemistry",
     "Computational Chemistry",
   ]
